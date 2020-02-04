@@ -1,7 +1,7 @@
 {
   "name": "vue-carousel-guppy",
   "version": "0.18.0",
-  "description": "A flexible, responsive, touch-friendly carousel for Vue.js",
+  "description": "A flexible, responsive, touch-friendly carousel for Vue.js (custom guppy)",
   "main": "dist/vue-carousel.min.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js && npm run updateDocAssets",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SSENSE/vue-carousel.git"
+    "url": "git+ssh://git@github.com/wckhg89/vue-carousel.git"
   },
   "keywords": [
     "Vue",
@@ -27,12 +27,12 @@
     "slider",
     "responsive"
   ],
-  "author": "todd.beauchamp@ssense.com",
+  "author": "wckhg89@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ssense/vue-carousel/issues"
+    "url": "https://github.com/wckhg89/vue-carousel/issues"
   },
-  "homepage": "https://github.com/ssense/vue-carousel#readme",
+  "homepage": "https://github.com/wckhg89/vue-carousel#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
     "global": "^4.3.2",
