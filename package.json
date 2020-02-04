@@ -34,12 +34,13 @@
   },
   "homepage": "https://github.com/ssense/vue-carousel#readme",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "global": "^4.3.2",
     "regenerator-runtime": "^0.12.1",
     "vue": "^2.5.17"
   },
   "resolutions": {
-     "babel-core": "7.0.0-bridge.0"
+    "babel-core": "7.0.0-bridge.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

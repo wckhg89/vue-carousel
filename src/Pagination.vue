@@ -1,23 +1,23 @@
 <template>
   <div
-    v-show="carousel.pageCount > 1"
-    class="VueCarousel-pagination"
-    v-bind:class="{ [`VueCarousel-pagination--${paginationPositionModifierName}`]: paginationPositionModifierName }"
+          v-show="carousel.pageCount > 1"
+          class="VueCarousel-pagination"
+          v-bind:class="{ [`VueCarousel-pagination--${paginationPositionModifierName}`]: paginationPositionModifierName }"
   >
     <div class="VueCarousel-dot-container" role="tablist" :style="dotContainerStyle">
       <button
-        v-for="(page, index) in paginationCount"
-        :key="`${page}_${index}`"
-        class="VueCarousel-dot"
-        aria-hidden="false"
-        role="tab"
-        :title="getDotTitle(index)"
-        :value="getDotTitle(index)"
-        :aria-label="getDotTitle(index)"
-        :aria-selected="isCurrentDot(index) ? 'true' : 'false'"
-        v-bind:class="{ 'VueCarousel-dot--active': isCurrentDot(index) }"
-        v-on:click="goToPage(index)"
-        :style="dotStyle(index)"
+              v-for="(page, index) in paginationCount"
+              :key="`${page}_${index}`"
+              class="VueCarousel-dot"
+              aria-hidden="false"
+              role="tab"
+              :title="getDotTitle(index)"
+              :value="getDotTitle(index)"
+              :aria-label="getDotTitle(index)"
+              :aria-selected="isCurrentDot(index) ? 'true' : 'false'"
+              v-bind:class="{ 'VueCarousel-dot--active': isCurrentDot(index) }"
+              v-on:click="goToPage(index)"
+              :style="dotStyle(index)"
       ></button>
     </div>
   </div>
@@ -76,7 +76,6 @@ export default {
        */
       this.$emit("paginationclick", index);
     },
-
     /**
      * Check on current dot
      * @param {number} index - dot index
@@ -85,7 +84,6 @@ export default {
     isCurrentDot(index) {
       return index === this.carousel.currentPage;
     },
-
     /**
      * Generate dot title
      * @param {number} index - dot index
@@ -107,7 +105,6 @@ export default {
       basicBtnStyle[
         `margin-${this.paginationPropertyBasedOnPosition}`
       ] = `${carousel.paginationPadding * 2}px`;
-
       Object.assign(basicBtnStyle, {
         padding: `${carousel.paginationPadding}px`,
         width: `${carousel.paginationSize}px`,
@@ -118,9 +115,7 @@ export default {
             : carousel.paginationColor
         }`
       });
-
       if (carousel.maxPaginationDotCount === -1) return basicBtnStyle;
-
       const eachDotsWidth =
         carousel.paginationSize + carousel.paginationPadding * 2;
       const maxReverse = carousel.pageCount - carousel.maxPaginationDotCount;
@@ -149,23 +144,19 @@ export default {
   width: 100%;
   text-align: center;
 }
-
 .VueCarousel-pagination--top-overlay {
   position: absolute;
   top: 0;
 }
-
 .VueCarousel-pagination--bottom-overlay {
   position: absolute;
   bottom: 0;
 }
-
 .VueCarousel-dot-container {
   display: inline-block;
   margin: 0 auto;
   padding: 0;
 }
-
 .VueCarousel-dot {
   display: inline-block;
   cursor: pointer;
@@ -177,7 +168,6 @@ export default {
   border-radius: 100%;
   outline: none;
 }
-
 .VueCarousel-dot:focus {
   outline: 1px solid lightblue;
 }
